@@ -38,7 +38,7 @@ dmypy.json
 
 .vscode/
 
-*.pth*.pth
-
-.DS_Storenotebooks/best_deberta_model.pth
 *.pth
+notebooks/*.pth
+
+.DS_Store
