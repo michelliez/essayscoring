@@ -1,0 +1,7 @@
+[project]
+name = "essayscoring"
+version = "0.1.0"
+description = "LLM Kaggle competition to predict students' essay scores"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
