@@ -12,7 +12,7 @@ All models were validated using StratifiedKFold, with 5 folds. The final best va
 A separate notebook was used to infer on the test set, to save resource time. Model weights and configs were loaded from a JSON file and used for inference. This achieved a private score of **0.79530** and a public score of **0.78271**.  
 This model was then optimized with thresholding and achieved a private score of **0.80092**.
 
-## 2. DeBERTa Model + Feature Engineering
+## 2. DeBERTa Model + MLP
 ### 2.1 Model
 The same DeBERTa model from checkpoint `microsoft/deberta-v3-small` was used with **Mean Pooling**. However, rather than just a linear layer, the **Torch head** included a linear layer, ReLU activation layer, dropout, and final linear layer. This was created as a regression and rounded to the nearest essay score. 
 
@@ -20,7 +20,7 @@ The same DeBERTa model from checkpoint `microsoft/deberta-v3-small` was used wit
 Models were validated using StratifiedKFold, with 5 folds. The final best QWK score was **0.7889**. The best model per fold was saved as a .pth.    
 
 ### 2.3 Inference
-A seperate notebook was used to infer on the test set. Feature engineering was also performed on the test set, and model weights and configs were loaded from a JSON file. With thresholding, this achieved a score of **0.78484**.
+A seperate notebook was used to infer on the test set. Model weights and configs were loaded from a JSON file. With thresholding, this achieved a score of **0.78484**.
 
 
 ## 3. DeBERTa Model Seed Ensemble + Thresholding
